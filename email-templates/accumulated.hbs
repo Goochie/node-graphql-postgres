@@ -1,0 +1,151 @@
+{{{ parts.partHeader}}}
+<style>
+   td>div>a {
+       color: #8c8c8c;
+       text-decoration: none;
+    }
+</style>
+<table width="100%">
+  <tbody>
+    <tr>
+      <td>
+        <table cellspacing="0" cellpadding="0" width="565" align="center" style="border-radius: 5px; background-color: white;">
+          <tbody>
+            <tr>
+              <td style="font-weight: 400; color: #000; font-size: 23px">
+                Highlights of day
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 20px">
+                Here it's a quick overview o your day
+                <br>
+                <br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 22px 0 5px;background-color: #f7f7f7; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC">
+        {{#if isEvents}}
+        <table cellspacing="0" cellpadding="0" width="565" align="center" style="border-radius: 5px; background-color: white;">
+          <tbody>
+            <tr>
+              <td colspan="3" style="font-size:16px;padding:15px;border-bottom:1px solid #ccc;">
+                New Events
+              </td>
+            </tr>
+            {{#each events}}
+              <tr height="150">
+                <td width="150" style="padding: 0;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div style="width:150px;height:150px;background: center / cover no-repeat url({{photoUrl}})"></div>
+                </td>
+                <td style="font-size: 15px;padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div>{{title}}</div>
+                  <div style="color:#666666;font-size: 13px;">
+                    <div style="padding-top: 5px;">
+                      <img style="float: left;" src="https://smartlifepath.s3-eu-west-1.amazonaws.com/static/1.png">
+                      &nbsp;{{dates}}</div>
+                    <div>
+                      <img style="float: left;" src="https://smartlifepath.s3-eu-west-1.amazonaws.com/static/2.png">
+                      &nbsp;{{times}}</div>
+                    <div>
+                      <img style="float: left;" src="https://smartlifepath.s3-eu-west-1.amazonaws.com/static/3.png">
+                      &nbsp;{{location}}</div>
+                  </div>
+                </td>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}font-size: 15px;text-align: right;">
+                  <a style="background-color: #1a73e8;border: 1px solid #1a73e8;border-radius: 5px;padding: 7px 5px;width: 150px;text-align: center;max-width: 280px;display: inline-block;margin-bottom: 10px;color: #fff;text-decoration: none"
+              href="https://www.smartlifepath.com/dash-board/event/{{id}}#letfollow">
+                    Accept
+                  </a>
+                  <br>
+                  <a style="border:#ccc 1px solid;border-radius:5px;padding: 7px 5px;width: 150px;text-align: center;max-width:280px;display:inline-block;color: #666;text-decoration:none;"
+              href="https://www.smartlifepath.com/dash-board/event/{{id}}">
+                    More info
+                  </a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        <br>
+        {{/if}}
+        {{#if isFriends}}
+        <table cellspacing="0" cellpadding="0" width="565" align="center" style="border-radius: 5px; background-color: white;">
+          <tbody>
+            <tr>
+              <td colspan="3" style="font-size:16px;padding:15px;border-bottom:1px solid #ccc;">
+                Friends requests
+              </td>
+            </tr>
+            {{#each requests}}
+              <tr>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <img style="border-radius: 50%;height: 82px;" src="{{photoUrl}}">
+                </td>
+                <td style="font-size: 18px;padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div>{{username}}</div>
+                  <a style="color: #8c8c8c;text-decoration: none;">
+                    {{email}}
+                  </a>
+                </td>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}font-size: 15px;text-align: right;">
+                  <a style="background-color: #1a73e8;border: 1px solid #1a73e8;border-radius: 5px;padding: 7px 5px;width: 150px;text-align: center;max-width: 280px;display: inline-block;margin-bottom: 10px;color: #fff;text-decoration: none"
+              href="https://www.smartlifepath.com/dash-board/approve-friendship/{{id}}">
+                    Accept
+                  </a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        <br>
+        {{/if}}
+        {{#if isFunds}}
+        <table cellspacing="0" cellpadding="0" width="565" align="center" style="border-radius: 5px; background-color: white;">
+          <tbody>
+            <tr>
+              <td colspan="3" style="font-size:16px;padding:15px;border-bottom:1px solid #ccc;">
+                Fundraisers requests
+              </td>
+            </tr>
+            {{#each funds}}
+              <tr height="150">
+                <td width="150" style="padding: 0;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div style="width:150px;height:150px;background: center / cover no-repeat url({{photoUrl}})"></div>
+                </td>
+                <td style="font-size: 15px;padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div>{{title}}</div>
+                  <br>
+                  <div style="color:#666666;font-size: 14px;">
+                    Created by:
+                  </div>
+                  <div style="color:black;font-width:400;font-size: 14px;">
+                    {{owner.username}}
+                  </div>
+                </td>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}font-size: 15px;text-align: right;">
+                  <a style="background-color: #1a73e8;border: 1px solid #1a73e8;border-radius: 5px;padding: 7px 5px;width: 150px;text-align: center;max-width: 280px;display: inline-block;margin-bottom: 10px;color: #fff;text-decoration: none"
+              href="https://www.smartlifepath.com/dash-board/fund/{{id}}#letfollow">
+                    Accept
+                  </a>
+                  <br>
+                  <a style="border:#ccc 1px solid;border-radius:5px;padding: 7px 5px;width: 150px;text-align: center;max-width:280px;display:inline-block;color: #666;text-decoration:none;"
+              href="https://www.smartlifepath.com/dash-board/fund/{{id}}">
+                    More info
+                  </a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        <br>
+        {{/if}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+{{{ parts.partFooter}}}

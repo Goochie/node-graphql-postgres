@@ -1,0 +1,44 @@
+{{{ parts.partHeader}}}
+<table width="100%" style="max-width: 564px; padding: 20px" align="center">
+    <tbody>
+        <tr>
+            <td style="font-size: 30px; font-weight: bold; color: #333333; text-align: center;">
+                <svg x="0px" y="0px" width="20px" height="20px" viewBox="0 0 488.419 488.419" style="enable-background:new 0 0 488.419 488.419;">
+                    <path style="fill: #f00;" d="M480.778,366.78L277.816,70.219c-7.265-10.615-19.281-16.978-32.153-17.01  c-12.864-0.047-24.925,6.238-32.256,16.822L7.788,366.559c-9.264,13.373-10.346,30.791-2.806,45.197  c7.548,14.422,22.473,23.453,38.746,23.453h400.959c16.227,0,31.111-8.982,38.683-23.328  C490.935,397.536,489.94,380.167,480.778,366.78z M244.214,400.876c-17.073,0-30.916-13.826-30.916-30.912  c0-17.09,13.843-30.916,30.916-30.916c17.071,0,30.913,13.826,30.913,30.916C275.127,387.05,261.285,400.876,244.214,400.876z   M216.707,143.745c7.078-7.697,17.049-12.072,27.506-12.072c10.455,0,20.426,4.375,27.504,12.072  c7.079,7.696,10.614,17.996,9.736,28.422l-11.749,140.275c-7.816-3.48-16.406-5.501-25.491-5.501  c-9.087,0-17.676,2.021-25.491,5.501l-11.751-140.275C206.095,161.741,209.63,151.441,216.707,143.745z" />
+                </svg>
+                <p style="display: inline">The request for help was canceled</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" style="max-width: 564px; background-color: #F7F7F7; padding: 20px; border-spacing: 0;" align="center">
+    <tbody style="background-color: #FFFFFF;">
+        <tr>
+            <td style="padding: 20px 40px; text-align: center">
+                <p style="font-size: 15.71px; color: rgba(0,0,0,0.6);">
+                    Unfortunately the request for help from
+                </p>
+                <p style="font-size: 15.71px; color: #000000; display: inline;"> {{req.owner.username}}</p>
+                <p style="font-size: 15.71px; color: rgba(0,0,0,0.6); display: inline;">was canceled</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 40px;">
+                <p style="font-size: 14px; font-weight: bold; color: #022047;">Reques details:</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 40px;">
+                <p style="font-size: 13.71px; color: rgba(0,0,0,0.6);">{{req.description}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px 40px;">
+               <a style="background-color: #1a73e8; border-radius: 5px;padding: 10px 65px;max-width: 280px;display: inline-block;color: #fff;text-decoration: none;" href="https://www.smartlifepath.com/dash-board">
+                  Search another request
+               </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{{ parts.partFooter}}}

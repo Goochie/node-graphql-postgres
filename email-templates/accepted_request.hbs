@@ -1,0 +1,97 @@
+{{{ parts.partHeader}}}
+<table width="100%" style="max-width: 564px; padding: 20px" align="center">
+    <tbody>
+        <tr>
+            <td style="text-align: center;">
+                <img src="{{req.owner.photoUrl}}" style="width: 120px; height: 120px; border-radius: 50%">
+                <p style="font-size: 30px; font-weight: bold; color: #333333;">Hi {{req.owner.username}}!</p>
+                <p style="font-size: 18px; display: inline;">Your request for help was accepted by: </p>
+                <p style="font-size: 18px; font-weight: bold; display: inline;">{{req.volunteer.username}}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="100%" style="max-width: 564px; background-color: #F7F7F7; padding: 20px; border-spacing: 0;" align="center">
+    <tbody style="background-color: #FFFFFF;">
+        <tr>
+            <td style="padding: 20px 40px; text-align: center">
+                <table style="border-spacing: 20px">
+                    <tr>
+                        <td>
+                            <img src="{{req.volunteer.photoUrl}}" style="width: 120px; height: 120px; border-radius: 50%">
+                        </td>
+                        <td>
+                            <p style="font-size: 19.64px; font-weight: bold; color: rgba(0,0,0,0.87)">{{req.volunteer.username}}</p>
+                            <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 300.412 300.412" style="enable-background:new 0 0 300.412 300.412;">
+                                <g>
+                                    <path d="M271.262,50.041H29.15C13.153,50.041,0,63.01,0,79.191v142.03c0,16.01,13.022,29.15,29.15,29.15h242.112    c16.137,0,29.15-13.152,29.15-29.15V79.191C300.412,62.995,287.246,50.041,271.262,50.041z M265.583,65.94l-115.377,74.791    L34.831,65.94H265.583z M15.9,79.191c0-2.011,0.455-3.962,1.303-5.728l72.173,46.785L15.9,218.513V79.191z M271.262,234.471H29.15    c-1.648,0-3.221-0.317-4.679-0.869l78.277-104.686l43.134,27.961c2.632,1.706,6.019,1.704,8.65,0l43.133-27.961l78.277,104.686    C274.484,234.155,272.911,234.471,271.262,234.471z M284.512,218.513l-73.476-98.265l72.173-46.785    c0.848,1.766,1.303,3.717,1.303,5.728V218.513z" />
+                                </g>
+                            </svg>
+                            <p style="font-size: 13.75px; color: rgba(0,0,0,0.6); display: inline;">{{req.volunteer.email}}
+                                <br>
+                            </p>
+                            <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;">
+                                <g>
+                                    <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645
+                                        c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645
+                                        C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892
+                                        c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z" />
+                                    <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614
+                                        c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901
+                                        c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104
+                                        C179.265,127.948,165.464,141.901,148.5,141.901z" />
+                                </g>
+                            </svg>
+                            <p style="font-size: 13.75px; color: rgba(0,0,0,0.6); display: inline;">{{req.volunteer.location}}
+                                <br>
+                            </p>
+                            <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 420.514 420.514" style="enable-background:new 0 0 420.514 420.514;">
+                                <path d="M293.814,254.728l-37.701,28.083l-7.636,24.527c-55.525-33.273-102.028-79.776-135.301-135.301l24.527-7.636l28.083-37.701  L75.978,0L33.567,20.089L0,101.609l0.863,2.632c24.033,73.265,65.555,140.81,120.077,195.332  c54.522,54.522,122.067,96.044,195.332,120.077l2.632,0.863l81.521-33.567l20.088-42.41L293.814,254.728z M147.246,126.481  l-13.948,18.724L50.681,28.58l20.34-9.634L147.246,126.481z M318.327,404.53c-70.028-23.428-134.565-63.348-186.78-115.563  C79.332,236.752,39.412,172.215,15.985,102.186l25.164-61.113l79.908,112.801l-30.221,9.409l4.594,8.095  c36.402,64.154,89.554,117.306,153.708,153.708l8.096,4.594l9.408-30.221l112.801,79.907L318.327,404.53z M391.934,369.833  l-116.626-82.617l18.724-13.948l107.536,76.225L391.934,369.833z" />
+                            </svg>
+                            <p style="font-size: 13.75px; color: rgba(0,0,0,0.6); display: inline;">{{req.volunteer.mobile}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td>
+                            <a style="background-color: #1a73e8; border-radius: 5px;padding: 10px 35px;max-width: 280px;display: inline-block;color: #fff;text-decoration: none;" href="https://www.smartlifepath.com/dash-board">
+                                Review status
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 40px;">
+                <p style="font-size: 14px; font-weight: bold; color: #022047;">Reques details:</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 40px;">
+                <p style="font-size: 13.71px; color: rgba(0,0,0,0.6);">{{req.description}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 40px 40px 40px;">
+
+                <svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;">
+                    <g>
+                        <path d="M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645
+                            c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645
+                            C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892
+                            c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z" />
+                        <path d="M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614
+                            c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901
+                            c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104
+                            C179.265,127.948,165.464,141.901,148.5,141.901z" />
+                    </g>
+                </svg>
+                <p style="font-size: 13.75px; color: rgba(0,0,0,0.6); display: inline;">{{req.owner.location}}
+                    <br>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{{{ parts.partFooter}}}

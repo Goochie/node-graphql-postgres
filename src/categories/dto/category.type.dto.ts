@@ -1,0 +1,7 @@
+export enum CategoryTypeDto {
+  ORGANISATION = 'ORGANISATION',
+  EVENT = 'EVENT',
+  FUND = 'FUND',
+  STORE_PRODUCT = 'STORE_PRODUCT',
+  SERVICE = 'SERVICE',
+}

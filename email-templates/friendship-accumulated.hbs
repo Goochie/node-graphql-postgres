@@ -1,0 +1,61 @@
+{{{ parts.partHeader}}}
+<style>
+   td>div>a {
+       color: #8c8c8c;
+       text-decoration: none;
+    }
+</style>
+<table width="100%">
+  <tbody>
+    <tr>
+      <table align="center" width="222">
+        <tbody>
+          <tr>
+            <td style="background-image:url(https://ci6.googleusercontent.com/proxy/eF4BFsL-nOB8K1i2MGngDcMfOPpQuO57I8pIfZQu3xscJkmBw4vTGJSNVQf4j8AIZp0OpGRmvO6PhbVh8-oXGGboHiVisLFcXasQ6Pl06gTQQs8lo1o7fg=s0-d-e1-ft#https://smartlifepath.s3-eu-west-1.amazonaws.com/static/avatar-bg.png);background-repeat: no-repeat;background-position: center;background-size: cover;text-align: center;padding: 7px 33px;">
+              <img style="border-radius: 50%;height: 160px;" src="{{user.photoUrl}}">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align: center; font-weight: 500; color: #666666; font-size: 25px">
+        Hi {{user.username}}!
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align: center; font-size: 20px">
+        You got {{requests.length}} new friend requests
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="padding: 22px 0;background-color: #f7f7f7; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC">
+        <table cellspacing="0" cellpadding="0" width="565" align="center" style="border-radius: 5px; background-color: white;">
+          <tbody>
+            {{#each requests}}
+              <tr>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <img style="border-radius: 50%;height: 82px;" src="{{photoUrl}}">
+                </td>
+                <td style="font-size: 18px;padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}">
+                  <div>{{username}}</div>
+                  <a style="color: #8c8c8c;text-decoration: none;">
+                    {{email}}
+                  </a>
+                </td>
+                <td style="padding:15px;{{#unless @last}}border-bottom:1px solid #ccc;{{/unless}}font-size: 18px;text-align: right;">
+                  <a style="background-color: #1a73e8; border-radius: 5px;padding: 7px 56px;max-width: 280px;display: inline-block;color: #fff;text-decoration: none;font-width:500;"
+              href="https://www.smartlifepath.com/dash-board/approve-friendship/{{id}}">
+                    Accept
+                  </a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{{{ parts.partFooter}}}

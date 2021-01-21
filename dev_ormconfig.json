@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "postgres",
+  "password": "smartLifePath123",
+  "database": "smart-life-path",
+  "entities": ["dist/entity/*.js"],
+  "synchronize": true
+}
